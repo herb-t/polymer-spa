@@ -14,18 +14,19 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
 <dom-module id="portfolio-about">
   <template>
-    <style>
+    <style include="shared-styles">
       :host {
         display: block;
-        color: #969696;
-        @apply(--layout-vertical);
-        line-height: 1.6;
       }
 
     </style>
 
-    <h1>About</h1>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit iusto quidem vitae earum culpa tenetur animi amet pariatur obcaecati, incidunt! Molestiae ipsum, placeat incidunt. Voluptatum numquam tenetur voluptate. Voluptate, quasi.</p>
+    <div class="l-content-container">
+      
+      <h1>About</h1>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit iusto quidem vitae earum culpa tenetur animi amet pariatur obcaecati, incidunt! Molestiae ipsum, placeat incidunt. Voluptatum numquam tenetur voluptate. Voluptate, quasi.</p>
+    </div>
+
     <portfolio-footer></portfolio-footer>
   </template>
   <script>

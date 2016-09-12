@@ -2,10 +2,21 @@
 <dom-module id="shared-styles">
   <template>
     <style>
-      h1 {
-        font-family: 'Roboto';
-        font-weight: 300;
-      }
+		:root {
+			--site-font-family: 'Roboto', Arial, sans-serif;
+			--white: #FFFFFF;
+			--black: #000;
+		  --logo-red: #cf482a;
+		  --logo-black: #393b39; 
+			--site-max-width: 1024px;
+			}
+
+			.l-content-container {
+				width: 100%;
+				max-width: var(--site-max-width);
+				margin: 0 auto;
+			}
+
     </style>
   </template>
 </dom-module>
