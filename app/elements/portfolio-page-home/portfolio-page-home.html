@@ -10,6 +10,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
 <link rel="import" href="../../bower_components/polymer/polymer.html">
 <link rel="import" href="../../bower_components/google-youtube/google-youtube.html">
+<link rel="import" href="../portfolio-project/portfolio-project.html">
 
 <dom-module id="portfolio-home">
   <template>
@@ -19,17 +20,66 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         display: block;
       }
 
+      .l-project-grid {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-flex-direction: row;
+            -ms-flex-direction: row;
+                flex-direction: row;
+        -webkit-flex-wrap: wrap;
+            -ms-flex-wrap: wrap;
+                flex-wrap: wrap;
+        -webkit-align-items: center;
+                align-items: center;
+        -webkit-box-align: center;
+            -moz-box-align: center;
+            -ms-flex-align: center;
+        -webkit-justify-content: space-between;
+                justify-content: space-between;
+      }
+
+      .l-project-grid portfolio-project {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-flex-direction: row;
+            -ms-flex-direction: row;
+                flex-direction: row;
+        -webkit-align-items: center;
+                align-items: center;
+        -webkit-box-align: center;
+        -moz-box-align: center;
+        -ms-flex-align: center;
+        -webkit-justify-content: center;
+                justify-content: center;
+        -webkit-flex: 0 0 33.3333333333%;
+            -ms-flex: 0 0 33.3333333333%;
+                flex: 0 0 33.3333333333%;
+      }
+
 
     </style>
 
-    <div class="l-content-container">
-      
-      <h1>Home Page</h1>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo eveniet, veritatis ipsum tempore odio debitis enim distinctio laborum ipsam facilis aspernatur deleniti delectus cumque commodi! Amet explicabo fuga quam iure.</p>
+    <main class="l-content-container">      
 
-    </div>
+      <section class="l-project-grid">
+        
+        <portfolio-project url="#/about" image="images/logo_200x110.png" alt="My Logo" title="Project Title"></portfolio-project>
+        <portfolio-project url="#/projectee" image="images/logo_200x110.png" alt="My Logo" title="Small Title"></portfolio-project>
+        <portfolio-project url="#/projecto" image="images/logo_200x110.png" alt="My Logo" title="A Big Title?"></portfolio-project>
+        <portfolio-project url="" image="images/logo_200x110.png" alt="My Logo" title="Yet Aother"></portfolio-project>
+        <portfolio-project url="" image="images/logo_200x110.png" alt="My Logo" title="A Touch of Sweetness"></portfolio-project>
+        <portfolio-project url="" image="images/logo_200x110.png" alt="My Logo" title="Smally"></portfolio-project>
+        <portfolio-project url="" image="images/logo_200x110.png" alt="My Logo" title="Amazing"></portfolio-project>
+      
+      </section>
+    </main>
     
     <portfolio-footer></portfolio-footer>
+
   </template>
   <script>
     /**

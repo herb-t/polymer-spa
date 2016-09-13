@@ -9,28 +9,56 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 -->
 
 <link rel="import" href="../../bower_components/polymer/polymer.html">
-<link rel="import" href="../../bower_components/paper-tabs/paper-tabs.html">
-<link rel="import" href="../portfolio-page-hero/portfolio-page-hero.html">
 
-<dom-module id="portfolio-about">
+<dom-module id="portfolio-page-project">
   <template>
     <style include="shared-styles">
       :host {
         display: block;
       }
 
+      .l-project-page {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-flex-direction: row;
+            -ms-flex-direction: row;
+                flex-direction: row;
+        -webkit-align-items: center;
+                align-items: center;
+        -webkit-box-align: center;
+            -moz-box-align: center;
+            -ms-flex-align: center;
+        -webkit-justify-content: flex-start;
+                justify-content: flex-start;
+      }
+
+      #sidebar {
+        -webkit-flex: 1;
+            -ms-flex: 1;
+                flex: 1;
+      }
+
+      #content {
+        -webkit-flex: 3;
+            -ms-flex: 3;
+                flex: 3;
+      }
+
+
+
     </style>
 
-    <main class="l-content-container">      
-      <section>
+    <div class="l-project-page">
+      <aside id="sidebar">
+        <content select="[card-hero]"></content>
+      </aside>
 
-        <h1>About</h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo eveniet, veritatis ipsum tempore odio debitis enim distinctio laborum ipsam facilis aspernatur deleniti delectus cumque commodi! Amet explicabo fuga quam iure.</p>
-
+      <section id="content">
+        <content select="[card-hero]"></content>      
       </section>
-    </main>
-
-    <portfolio-footer></portfolio-footer>
+    </div>
 
   </template>
   <script>
@@ -43,7 +71,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
          * Specifies HTML tag name for custom Polymer element.
          * @prop
          */
-        is: 'portfolio-about',
+        is: 'portfolio-page-project',
         /**
          * Declares properties on custom Polymer element.
          *
