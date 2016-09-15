@@ -17,6 +17,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 <link rel="import" href="../portfolio-page-home/portfolio-page-home.html">
 <link rel="import" href="../portfolio-page-about/portfolio-page-about.html">
 <link rel="import" href="../portfolio-page-contact/portfolio-page-contact.html">
+<link rel="import" href="../portfolio-page-project-stitches/portfolio-page-project-stitches.html">
 
 <link rel="import" href="../../bower_components/neon-animation/neon-animated-pages.html">
 <link rel="import" href="../../bower_components/neon-animation/neon-animatable.html">
@@ -55,7 +56,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
     <app-location route="{{route}}" use-hash-as-path></app-location>
     <app-route route="{{route}}" pattern="/:page" data="{{pageData}}" tail="{{pageTail}}"></app-route>
-    <portfolio-page-post post="{{postsData.slug}}" active="{{postsActive}}"></portfolio-page-post>
+    <!-- <portfolio-page-post post="{{postsData.slug}}" active="{{postsActive}}"></portfolio-page-post> -->
 
     <style is="custom-style" include="iron-flex iron-flex-alignment iron-flex-reverse iron-flex-factors iron-positioning">
 
@@ -334,6 +335,10 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
           <neon-animatable key="contact">
             <portfolio-contact route="{{pageTail}}" on-scroll-top="handleScrollTop"></portfolio-contact>
+          </neon-animatable>
+
+          <neon-animatable key="stitches">
+            <portfolio-page-project-stitches route="{{pageTail}}" on-scroll-top="handleScrollTop"></portfolio-page-project-stitches>
           </neon-animatable>
 
         </neon-animated-pages>
