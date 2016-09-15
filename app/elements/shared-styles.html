@@ -22,6 +22,9 @@
 				margin: 0 auto;
 			}
 
+			/*
+			* project page global styles
+			*/
 			.l-project-page-content {
 			  display: -webkit-box;
 			  display: -ms-flexbox;
@@ -45,8 +48,6 @@
 			      -ms-flex: 1;
 			          flex: 1;
 			  min-height: 100vh;
-			  -webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
-			          box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
 			}
 
 			.l-project-main {
@@ -56,6 +57,18 @@
 			          flex: 4;
 			}
 
+			@media screen and (max-width: 768px) {
+				.l-project-page-content {
+					-webkit-flex-direction: column;
+					    -ms-flex-direction: column;
+					        flex-direction: column;
+				}
+
+				.l-project-sidebar {
+					min-height: 1px;
+				}
+			}
+ 
     </style>
   </template>
 </dom-module>
