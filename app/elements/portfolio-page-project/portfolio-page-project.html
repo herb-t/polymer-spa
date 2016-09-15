@@ -51,13 +51,15 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     </style>
 
     <div class="l-project-page">
-      <aside id="sidebar">
-        <content select="[sidebar]"></content>
-      </aside>
 
-      <section id="content">
+      <div id="sidebar">
+        <content select="[sidebar]"></content>
+      </div>
+
+      <div id="content">
         <content select="[content]"></content>      
-      </section>
+      </div>
+      
     </div>
 
   </template>
@@ -72,6 +74,9 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
          * @prop
          */
         is: 'portfolio-page-project',
+
+        extends: 'div',
+
         /**
          * Declares properties on custom Polymer element.
          *
