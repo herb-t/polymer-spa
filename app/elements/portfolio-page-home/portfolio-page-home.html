@@ -40,12 +40,14 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         -ms-flex-line-pack: justify;  /* IE10 */
         -webkit-justify-content: space-between;
                 justify-content: space-between;
+        padding: 50px 0;
       }
 
       @media screen and (max-width: 480px) {
         .l-project-grid {
           -webkit-justify-content: center;
                   justify-content: center;
+          padding: 25px 0;
         }
       }
 
@@ -76,8 +78,10 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
       <section class="l-project-grid">
 
-        <template is="dom-repeat" items="{{projects}}">
-            <portfolio-project url="{{item.url}}" image="{{item.image}}" alt="{{item.alt}}" title="{{item.title}}"></portfolio-project>
+        <template is="dom-repeat" items="{{projects}}" as="project">
+
+            <portfolio-project url="{{project.url}}" image="{{project.image}}" alt="{{project.alt}}" title="{{project.title}}"></portfolio-project>
+
         </template>
       
       </section>

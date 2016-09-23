@@ -9,138 +9,116 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 -->
 
 <link rel="import" href="../../bower_components/polymer/polymer.html">
+<link rel="import" href="../../bower_components/polymer/polymer.html">
+<link rel="import" href="../../bower_components/polymer/polymer.html">
+<link rel="import" href="../portfolio-icons/portfolio-icons.html">
 
 <dom-module id="portfolio-footer">
   <template>
-    <style>
-      :host .container {
-        margin: auto;
-        position: relative;
-        top: 50%;
-        -ms-transform: translateY(-50%);
-        -webkit-transform: translateY(-50%);
-        transform: translateY(-50%);
-      }
+    <style include="shared-styles">
 
       footer {
-        height: 50px;
-        margin-top: 14px;
-        color: #ffffff;
-        background-color: var(--logo-black);
-        text-align: center;
+        @apply(--layout-flex);
+        -webkit-flex-direction: row;
+            -ms-flex-direction: row;
+                flex-direction: row;
+        -webkit-align-content: center;
+                align-content: center;
+        -webkit-justify-content: center;
+                justify-content: center;
+        background: var(--logo-black);
+        height: 100px;
       }
 
-      footer div {
-        max-width: 320px;
-        margin: 0 auto;
+      .footer-wrap {
+        @apply(--layout-flex);
+        -webkit-justify-content: flex-end;
+                justify-content: flex-end;
+        -webkit-align-content: flex-end;
+                align-content: flex-end;
       }
 
-      footer p {
-        display: inline-block;
+      .footer-content {
+        @apply(--layout-flex);
+        -webkit-flex-direction: row;
+            -ms-flex-direction: row;
+                flex-direction: row;
+        -webkit-align-items: center;
+                align-items: center;
+        -webkit-align-self: center;
+                align-self: center;
+        list-style: none;
+        padding: 0;
+        margin: 0;
       }
 
-      footer a {
-        color: #ffffff;
-        font-weight: 300;
-        text-decoration: none;
-        text-transform: uppercase;
-      }
-
-      @media screen and (min-width: 480px) {
-
-
-        :host .container {
-          max-width: 480px;
-        }
-
-        footer {
-          height: 95px;
-          margin-top: 60px;
-        }
-
-        footer div {
-          max-width: 480px;
-        }
-
-        footer a {
-          font-size: 18px;
-        }
-      }
-
-      @media screen and (min-width: 600px) {
-
-        :host .container {
-          max-width: 600px;
-        }
-
-        footer div {
-          max-width: 600px;
-        }
-      }
-
-      @media screen and (min-width: 960px) {
-
-        :host .container {
-          margin-left: 0;
-          max-width: 960px;
-        }
-
-        :host .content {
-          padding: 0 10%;
-
-        }
+      .footer-content li {
+        margin: 0 50px 0 0;
+        padding: 0;
         
-        footer {
-          margin-top: 74px;
-          text-align: left;
+      }
+
+/*      .footer-content li:last-child {
+        margin-right: 0;
+        
+      }*/
+
+      .icon {
+        width: 40px;
+        height: 40px;
+        color: var(--white);
+      }
+
+      @media screen and (max-width: 767px) {
+        .icon {
+          width: 30px;
+          height: 30px;
         }
 
-        footer div {
-          max-width: 960px; 
-        }
-
-        footer a {
-          font-size: 16px;
+        .footer-content li {
+          margin: 0 40px 0 0;
+          
         }
       }
 
-      @media screen and (min-width: 1024px) {
-        :host .container {
-          max-width: 1024px;
-        }
-
-        footer div {
-          max-width: 1024px;
-        }
-      }
-
-
-      @media screen and (min-width: 1280px) {
-
-        :host .container {
-          max-width: 1280px;
-        }
-
-        footer {
-          height: 75px;
-        }
-
-        footer div {
-          max-width: 1280px;
-        }
-      }
     </style>
+
     <footer>
-      <div class="container">
-        <div class="content">
-          <p><a href="https://www.google.com" target="_blank">Google</a></p>
-          <span>&middot;</span>
-          <p><a href="https://www.google.com/intl/en/policies/privacy/?fg=1" target="_blank">Privacy</a></p>
-          <span>&middot;</span>
-          <p><a href="https://www.google.com/intl/en/policies/terms/?fg=1" target="_blank">Terms</a></p>
-        </div>
+
+      <div class="l-content-container footer-wrap">
+
+        <ul class="footer-content">
+
+          <li>
+            <a href="https://www.linkedin.com/" target="_blank">
+              <iron-icon icon="social:linkedin" class="icon icon-youtube"></iron-icon>
+            </a>
+          </li>
+
+          <li>
+            <a href="https://www.facebook.com/" target="_blank">
+              <iron-icon icon="social:facebook" class="icon icon-youtube"></iron-icon>
+            </a>
+          </li>
+
+          <li>
+            <a href="https://www.facebook.com" target="_blank">
+              <iron-icon icon="social:twitter" class="icon icon-twitter"></iron-icon>
+            </a>
+          </li>
+
+          <li>
+            <a href="https://www.instagram.com/" target="_blank">
+              <iron-icon icon="social:instagram" class="icon icon-youtube"></iron-icon>
+            </a>
+          </li>
+          
+        </ul>
+        
       </div>
+      
     </footer>
+
   </template>
   <script>
     /**

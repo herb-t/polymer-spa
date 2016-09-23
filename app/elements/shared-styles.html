@@ -2,13 +2,21 @@
 <dom-module id="shared-styles">
   <template>
     <style>
-		:root {
-			--site-font-family: 'Roboto', Arial, sans-serif;
-			--white: #FFFFFF;
-			--black: #000;
-		  --logo-red: #cf482a;
-		  --logo-black: #393b39; 
-			--site-max-width: 1280px;
+			:root {
+				--site-font-family: 'Roboto', Arial, sans-serif;
+				--white: #FFFFFF;
+				--black: #000;
+				--logo-red: #cf482a;
+				--logo-black: #393b39; 
+				--site-max-width: 1280px;
+		  
+		  	--layout-flex: {
+		  		display: -webkit-flex;
+		  		display: -moz-flex;
+		  		display: -ms-flex;
+		  		display: -o-flex;
+		  		display: flex;
+		  	};
 			}
 			
 			section,
@@ -26,10 +34,7 @@
 			* project page global styles
 			*/
 			.l-project-page-content {
-			  display: -webkit-box;
-			  display: -ms-flexbox;
-			  display: -webkit-flex;
-			  display: flex;
+			  @apply(--layout-flex);
 			  -webkit-flex-direction: row;
 			      -ms-flex-direction: row;
 			          flex-direction: row;
