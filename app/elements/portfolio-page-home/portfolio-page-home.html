@@ -75,16 +75,13 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     <main class="l-content-container">      
 
       <section class="l-project-grid">
-        
-        <portfolio-project url="#/about" image="images/logo_200x110.png" alt="My Logo" title="Project Title"></portfolio-project>
-        <portfolio-project url="#/stitches" image="images/logo_200x110.png" alt="My Logo" title="Small Title"></portfolio-project>
-        <portfolio-project url="#/stitches" image="images/logo_200x110.png" alt="My Logo" title="A Big Title?"></portfolio-project>
-        <portfolio-project url="" image="images/logo_200x110.png" alt="My Logo" title="Yet Aother"></portfolio-project>
-        <portfolio-project url="" image="images/logo_200x110.png" alt="My Logo" title="A Touch of Sweetness"></portfolio-project>
-        <portfolio-project url="" image="images/logo_200x110.png" alt="My Logo" title="Smally"></portfolio-project>
-        <portfolio-project url="" image="images/logo_200x110.png" alt="My Logo" title="Amazing"></portfolio-project>
+
+        <template is="dom-repeat" items="{{projects}}">
+            <portfolio-project url="{{item.url}}" image="{{item.image}}" alt="{{item.alt}}" title="{{item.title}}"></portfolio-project>
+        </template>
       
       </section>
+
     </main>
     
     <portfolio-footer></portfolio-footer>
@@ -101,6 +98,49 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
        * @prop
        */
       is: 'portfolio-home',
+
+      ready: function() {
+
+        this.projects = [
+          {
+            title: 'Project Title',
+            url: '#/about',
+            image: 'images/logo_200x110.png',
+            alt: 'Project Logo'
+          },
+          {
+            title: 'Stitches',
+            url: '#/stitches',
+            image: 'images/logo_200x110.png',
+            alt: 'Project Logo'
+          },
+          {
+            title: 'Lets Make This One Big',
+            url: '#/stitches',
+            image: 'images/logo_200x110.png',
+            alt: 'Project Logo'
+          },
+          {
+            title: 'Project Title',
+            url: '#/stitches',
+            image: 'images/logo_200x110.png',
+            alt: 'Project Logo'
+          },
+          {
+            title: 'Project Title',
+            url: '#/stitches',
+            image: 'images/logo_200x110.png',
+            alt: 'Project Logo'
+          },
+          {
+            title: 'Project Title',
+            url: '#/stitches',
+            image: 'images/logo_200x110.png',
+            alt: 'Project Logo'
+          }
+
+        ];
+      },
      
       /**
        * Fires an event to scroll the page to the top
