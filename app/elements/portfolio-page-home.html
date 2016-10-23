@@ -44,14 +44,17 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         -ms-flex-line-pack: justify;  /* IE10 */
         -webkit-justify-content: space-between;
                 justify-content: space-between;
-        padding: 50px 0;
+        padding: 50px 25px;
+        -webkit-box-sizing: border-box;
+           -moz-box-sizing: border-box;
+                box-sizing: border-box;
       }
 
       @media screen and (max-width: 480px) {
         .l-project-grid {
           -webkit-justify-content: center;
                   justify-content: center;
-          padding: 25px 0;
+          padding: 25px;
         }
       }
 
@@ -126,62 +129,46 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
       ready: function() {
 
-        /*
-          Star Wars Kraft site - http://www.kraftstarwarsroom.com/
-          YouTube Rewind - https://rewindtothefuture.withyoutube.com/
-          Youtube NextUp - https://www.youtube.com/yt/nextup/?noapp=1
-          Youtube Creators - https://www.youtube.com/yt/creators/?noapp=1
-          Stitches - http://hookerz.github.io/stitches/
-          Terra Bella - https://terrabella.google.com/
-          Descent 7
-          Artifact Holiday - http://www.artifactdesign.com/holiday-memory/
-          Herb Holiday
-
-          Touch of Sweetness
-          Music Three.js app
-
-        */
-
         this.projects = [
           {
+            title: 'YouTube Rewind',
+            url: '#/rewind',
+            image: 'images/thumbnails/logo-rewind.png',
+            alt: 'YouTube Rewind Logo'
+          },
+          {
             title: 'YouTube NextUp',
-            url: '#/stitches',
+            url: '#/nextup',
             image: 'images/thumbnails/logo-nextup.png',
             alt: 'Project Logo'
           },
           {
-            title: 'YouTube Rewind',
-            url: '#/about',
-            image: 'images/thumbnails/logo-rewind.png',
-            alt: 'Project Logo'
-          },
-          {
-            title: 'YouTube Creatorhub',
-            url: '#/stitches',
-            image: 'images/thumbnails/logo-creator.png',
-            alt: 'Project Logo'
-          },
-          {
-            title: 'Terra Bella',
-            url: '#/stitches',
-            image: 'images/thumbnails/logo-terra-bella.png',
-            alt: 'Project Logo'
-          },
-          {
-            title: 'Descent 7',
-            url: '#/stitches',
-            image: 'images/thumbnails/sub.png',
-            alt: 'Project Logo'
-          },
-          {
             title: 'Artifact',
-            url: '#/stitches',
+            url: '#/artifact-holiday-memory',
             image: 'images/thumbnails/memory.png',
             alt: 'Artifact Holiday Memory'
           },
           {
+            title: 'YouTube Creatorhub',
+            url: '#/creator-hub',
+            image: 'images/thumbnails/logo-creator.png',
+            alt: 'Project Logo'
+          },
+          {
+            title: 'Descent 7',
+            url: '#/descent-7',
+            image: 'images/thumbnails/sub.png',
+            alt: 'Project Logo'
+          },
+          {
+            title: 'Terra Bella',
+            url: '#/terra-bella',
+            image: 'images/thumbnails/logo-terra-bella.png',
+            alt: 'Project Logo'
+          },
+          {
             title: 'Kraft Star Wars',
-            url: '#/stitches',
+            url: '#/kraft-mac-n-cheese',
             image: 'images/thumbnails/logo-sw.png',
             alt: 'Kraft Star Wars Mac n Cheese'
           },
@@ -193,7 +180,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
           },
           {
             title: 'Holiday Card',
-            url: '#/stitches',
+            url: '#/holiday-slots',
             image: 'images/thumbnails/logo-slots.png',
             alt: 'Holiday Slots'
           }

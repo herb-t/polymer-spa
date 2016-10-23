@@ -10,6 +10,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
 <link rel="import" href="../../bower_components/polymer/polymer.html">
 <link rel="import" href="../../bower_components/paper-tabs/paper-tabs.html">
+<link rel="import" href="../../bower_components/iron-image/iron-image.html">
 <link rel="import" href="portfolio-footer.html">
 
 <dom-module id="portfolio-about">
@@ -19,13 +20,26 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         display: block;
       }
 
+      iron-image ::content img {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+      }
+
+      a {
+        color: #000;
+        font-weight: 700;
+      }
+
     </style>
 
     <main class="l-content-container">      
       <section>
 
-        <h1>About</h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo eveniet, veritatis ipsum tempore odio debitis enim distinctio laborum ipsam facilis aspernatur deleniti delectus cumque commodi! Amet explicabo fuga quam iure.</p>
+        <iron-image preload fade src="../../images/about-img.jpg"></iron-image>
+        <p>I'm a front end developer based out of Ann Arbor, Michigan. I live with my lovely wife and two little rugrats. I'm originally from Grand Rapids, Michigan but lived in Atlanta, Georgia for a little over 20 years. Currenly, I am working at <a href="http://byhook.com/work" target="_blanbk">Hook Studios</a> here in Ann Arbor.</p>
+
+        <p>When i'm not working, I spend most my free time with the family but I also have been known to shoot some basketball and play a mean Imperial DPS on Elder Scrolls Online for the PS4.</p>
 
       </section>
     </main>
@@ -43,14 +57,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
          * Specifies HTML tag name for custom Polymer element.
          * @prop
          */
-        is: 'portfolio-about',
-        /**
-         * Declares properties on custom Polymer element.
-         *
-         */
-        properties: {
-       
-        }
+        is: 'portfolio-about'
 
       });
   </script>

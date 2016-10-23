@@ -66,7 +66,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       :host {
         @apply(--layout-flex);
         @apply(--layout-vertical);
-        font-family: 'Roboto';
+        font-family: 'Open Sans', sans-serif;
       }
 
       #main-nav .title {
@@ -94,7 +94,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       #main-nav .title span {
         @apply(--layout-self-center);
         font-size: 16px;
-        font-family: 'Product Sans';
+        font-family: 'Open Sans', sans-serif;
       }
 
       #main-nav .title #logo {
@@ -238,7 +238,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
         #main-nav paper-toolbar {
           --paper-toolbar-content: {
-            max-width: 1280px;
+            max-width: 1120px; /* site-max-width */
             margin: 0 auto;
           };
         }
@@ -333,8 +333,41 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
             <portfolio-contact route="{{pageTail}}" on-scroll-top="handleScrollTop"></portfolio-contact>
           </neon-animatable>
 
+          <!-- Individual Project Pages -->
+          <neon-animatable key="rewind">
+            <portfolio-page-project-rewind route="{{pageTail}}" on-scroll-top="handleScrollTop"></portfolio-page-project-rewind>
+          </neon-animatable>
+
+          <neon-animatable key="nextup">
+            <portfolio-page-project-nextup route="{{pageTail}}" on-scroll-top="handleScrollTop"></portfolio-page-project-nextup>
+          </neon-animatable>
+
+          <neon-animatable key="artifact-holiday-memory">
+            <portfolio-page-project-artifact route="{{pageTail}}" on-scroll-top="handleScrollTop"></portfolio-page-project-artifact>
+          </neon-animatable>
+
+          <neon-animatable key="creator-hub">
+            <portfolio-page-project-creator route="{{pageTail}}" on-scroll-top="handleScrollTop"></portfolio-page-project-creator>
+          </neon-animatable>
+
+          <neon-animatable key="descent-7">
+            <portfolio-page-project-descent route="{{pageTail}}" on-scroll-top="handleScrollTop"></portfolio-page-project-descent>
+          </neon-animatable>
+
+          <neon-animatable key="terra-bella">
+            <portfolio-page-project-terra route="{{pageTail}}" on-scroll-top="handleScrollTop"></portfolio-page-project-terra>
+          </neon-animatable>
+
+          <neon-animatable key="kraft-mac-n-cheese">
+            <portfolio-page-project-kraft route="{{pageTail}}" on-scroll-top="handleScrollTop"></portfolio-page-project-kraft>
+          </neon-animatable>
+
           <neon-animatable key="stitches">
             <portfolio-page-project-stitches route="{{pageTail}}" on-scroll-top="handleScrollTop"></portfolio-page-project-stitches>
+          </neon-animatable>
+
+          <neon-animatable key="holiday-slots">
+            <portfolio-page-project-slots route="{{pageTail}}" on-scroll-top="handleScrollTop"></portfolio-page-project-slots>
           </neon-animatable>
 
         </neon-animated-pages>
